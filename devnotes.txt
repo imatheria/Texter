@@ -1,0 +1,33 @@
+
+· set up github 
+	· readme.md and LICENSE
+	· short tutorial
+	· small documentation of features available so far
+
+· set up github readme.md tutorial and LICENSE 
+
+· cross browser check
+	· check which fonts are accepted by which browsers.
+	· find errors occur in browsers other than FF or Chrome.
+	· does jison parser crash in other browsers?
+
+· drag and remove loaded scripts
+
+· margin changes sometimes results in weirdness
+
+· layer name resolve
+	store a style definition with "name" key
+	
+· jison-parser
+	accept simple array between {{ }} for easy inline style changes 
+
+· apply blur via shader
+
+· render on offscreen canvas as a worker
+	so stars will continue to move while rendering. 
+	lets see how long offscreen canvas stays a special feature
+
+· letterspacing
+	text-draw letter-by-letter
+
+· do not get harassed by confused people 

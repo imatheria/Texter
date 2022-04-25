@@ -1,0 +1,92 @@
+<html>
+	<header>
+		<title>Texter</title>
+
+		<!--meta name="viewport" content=""-->
+		<!--link rel="shortcut-icon" content=""-->
+
+		<meta name="robots" content="noindex, nofollow" />
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="Content-Language" content="en">
+		<meta charset="iso-8859-1">
+
+		<link rel="stylesheet" type="text/css" href="texter.css" />
+	</header>
+	<body>
+		<div class="screen"></div>
+		<canvas class="screen"></canvas>
+
+		<div class="title label"><img src="images/texter.png"></div>
+		<div class="info label"><p>INFO</p></div>
+		<div class="script-field-area"><p>scripts</p></div>
+		<div class="resource-field-area"><p>resources</p></div>
+		<div class="framerate label"><p>framerate</p></div>
+		<div class="stats label"><p>STATS</p></div>
+		<div class="logs label"><p>LOGS</p></div>
+		<div class="hints label">
+			<div class="key-parent">
+				<div class="key big">&lArr;</div>
+				<div class="key big">&rArr;</div>
+			</div>
+			<div class="description-parent">
+				<div class="description">next/previous word</div>
+			</div>
+			<div class="key-parent">
+				<div class="key big">&uArr;</div>
+				<div class="key big">&dArr;</div>
+			</div>
+			<div class="description-parent">
+				<div class="description">next/previous line</div>
+			</div>
+			<div class="key-parent">
+				<div class="key">pgup</div>
+				<div class="key">pgdn</div>
+			</div>
+			<div class="description-parent">
+				<div class="description">next/previous page</div>
+			</div>
+			<!--div class="key-parent"> inactive by now
+				<div class="key">Home</div>
+				<div class="key">End</div>
+			</div>
+			<div class="description-parent">
+				<div class="description">next/previous script</div>
+			</div-->
+			<div class="key-parent">
+				<div class="key long">SPACE</div>
+			</div>
+			<div class="description-parent">
+				<div class="description">next visible element</div>
+			</div>
+			<div class="key-parent">
+				<div class="key fat">ESC</div>
+			</div>
+			<div class="description-parent">
+				<div class="description">exit performance</div>
+			</div>
+		</div>
+
+		<div class="start blocked">
+			<div class="button-text"><p>START</p></div>
+			<div class="progress"></div>
+		</div>
+
+		<!--div class="startbefore"><p>BEFORE</p></div-->
+
+		<div class="blurcanvas"> </div>
+		<div class="textcanvas"> </div>
+		<div class="imagecanvas"> </div>
+		<div class="measure-cm"></div>
+		<div class="measure-in"></div>
+		<canvas class="measuretext"></canvas>
+		
+	</body>
+	<script type="module">
+		
+		import * as engine from './js/main.js';
+
+		engine.start();
+
+	</script>
+</html>

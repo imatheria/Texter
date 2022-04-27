@@ -1,0 +1,56 @@
+< src: examples/images/aerial-view-atmosphere-clouds-cold-front-76969.jpg, drift: 0 0 .2, fade: 7 >
+{ 	fade: 1.7 page 1.7
+	margin: 40%
+	layer: {
+		blur( #000 .12 .4 )
+		stroke( #FFF 2, 1 )
+	}
+	layer: {
+		fill( #aaa .5 )
+	}	
+	layer: {
+		stroke( #FE8, 1.2 )
+		texture: { file: examples/images/galvanized2_sl.png, alpha: .8, blend: subtract }
+	}
+}
+dream
+
+envision
+
+retrieve
+
+recondition
+----
+< src: examples/images/CaliforniaNebula_Falls_3352.jpg, fade: 7, drift: 0 .2, offset: 0 -1vh  >
+{ 	font: examples/fonts/SF Atarian System Extended.ttf, color: #44FF44
+	fade: 1.7 page 1.7
+	margin: 10%
+	layer: {
+		blur( #AAF, .16, 1 )
+		texture: { file: examples/images/sand_seamless.jpg, alpha: 1, blend: multiply }
+		blend: add
+	}	
+	layer: {
+		fill( #aaa .4 )
+	}
+	layer: {
+		blur( #000, 7pt, 1, 7pt )
+	}
+	layer: {
+		stroke( #FE8, 1.2 )
+		texture: { file: examples/images/galvanized2_sl.png, alpha: .8, blend: subtract }
+	}
+}
+DREAM
+---
+---
+{ font: examples/fonts/ringbearer/RINGM___.TTF }
+ENVISION
+---
+---
+{ font: examples/fonts/Viking Medium.ttf }
+RETRIEVE
+---
+---
+{ font: examples/fonts/Damned Architect.ttf }
+RE|CONDITION

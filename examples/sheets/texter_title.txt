@@ -1,0 +1,32 @@
+{	font: Px437_IBM_ISO8, color: #FFFFFF
+	margin: 12%
+	layer: {
+		blur( #96F .1 1 4)
+		texture: { file: examples/images/FloorsMixedSize0018_matrix_seamless.png, operation: multiply }
+	}
+	layer: {
+		blur( #00F .06 1 4)
+		texture: { file: examples/images/FloorsMixedSize0018_matrix_seamless.png, operation: multiply }
+		blend: add
+	}
+	layer: {
+		blur( #F88 .04 1 4)
+		texture: { file: examples/images/FloorsMixedSize0018_matrix_seamless.png, operation: multiply }
+		blend: add
+	}
+	layer: {
+		blur( #FFF .02 1 4)
+		texture: { file: examples/images/FloorsMixedSize0018_matrix_seamless.png, operation: multiply }
+		blend: add
+	}
+	layer: {
+		stroke( #FFF 4 1 )
+		texture: { file: examples/images/FloorsMixedSize0018_matrix_seamless.png, alpha: 0.5, operation: subtract }
+	}
+}
+TEXTER
+---
+{	layer5:
+	{	blur( #FFF, .1, 1)	}
+}
+TEXTER

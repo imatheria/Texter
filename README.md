@@ -9,15 +9,22 @@ The only requirement is a browser supporting ES6 and WebGL, as most of actual br
 
 I use this in Firefox and sometimes Chrome, and as for now, Firefox performs best for this.
 
+
 ## Development progress
 
 Right now, i bring some examples to work and try to show them inside this readme.
+have a first look at it here -> <a href="https://imatheria.github.io/Texter/texter.html" target="_blank">https://imatheria.github.io/Texter/texter.html</a>
 
-After that a short tutorial will be added, followed by a little documentation. 
+GitHub Pages seems to get in trouble with my file-drop-listener. Dropping images and font files actually let ... it crash
 
-after all the work thats already done, this should be a matter of days now
 
-See ya later
+## stuff to pop up here in near future
+
+A short tutorial will be added, followed by a little documentation. 
+
+
+---
+regards
 Kristian
 
  

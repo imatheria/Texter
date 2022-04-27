@@ -1,0 +1,27 @@
+< src: examples/images/aerial-photography-of-city-3582128_101.jpg, drift: [[-10vmax,0], [0,20], word, [10vmax,20]] 0 0, fade: 7, scale: 1.2 >
+{	font: examples/fonts/matrix.ttf, color: #44FF44
+	layer: { 
+		blur( #000, .05, 1, 2.5pt )
+		fade: 4 line 4
+	}
+	layer: {
+		fill( #404 .6)
+		texture: { file: images/FloorsMixedSize0018_matrix_seamless.png, operation: add }
+		fade: 4 line 4
+	}
+	layer: { 
+		blur( #FFF .05)
+		fade: 4 line 4
+	}
+	layer: {
+		blur( star .1)
+		texture: { file: images/FloorsMixedSize0018_matrix_seamless.png, alpha: 1 }
+		fade: 4 line 4
+		operation: add
+	}
+	layer: { 
+		stroke( #FFF, 1.5px )
+		fade: 4 line 4
+}	}
+thE mAtrIx still haS yOu
+---

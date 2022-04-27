@@ -1,0 +1,21 @@
+< src: examples/images/gray-bridge-and-trees-814499.jpg, drift: 0 0 .234 0, fade: 7 >
+{ 	font: examples/fonts/PT_Serif-Web-Regular.ttf, color: #44FF44
+	layer: 
+	{	blur( #000, .7, .7)
+		stroke(  #fe6, 5 )
+		texture: { file:examples/images/pexels-innermost-limits-3894157seamless.jPG, alpha: 1, blend: multiply }
+	}
+	layer: { 
+		blur: { color: #888, size: 4pt , alpha: 1, density: 1.4 }
+		fill( #880, 0.2 )
+		texture: { file: examples/images/pexels-innermost-limits-3894157seamless.jPG, alpha: 1, blending: add	}
+	}
+	layer: {
+		stroke( #FFF, 1.1 )
+	}
+}
+[.5]
+ɑ                            Ω
+---
+[1]
+imagine me

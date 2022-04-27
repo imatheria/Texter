@@ -12,19 +12,22 @@ I use this in Firefox and sometimes Chrome, and as for now, Firefox performs bes
 
 ## Development progress
 
-Right now, i bring some examples to work and try to show them inside this readme.
-have a first look at it here -> <a href="https://imatheria.github.io/Texter/texter.html" target="_blank">https://imatheria.github.io/Texter/texter.html</a>
+Right now, i'm getting some examples to work to show them inside this readme. Get a first glance of Texter here -> <a href="https://imatheria.github.io/Texter/texter.html" target="_blank">https://imatheria.github.io/Texter/texter.html</a>
 
-GitHub Pages seems to get in trouble with my file-drop-listener. Dropping images and font files actually let ... it crash
+Unfortunately, the GitHub-Pages routines collide with Texter's routines for fetching files, having it crash with a lot of errormessages from a bunch of \*.jsm files.
+it seems i'll have to find a hosting solution for it. 
+
+Texter just requires a static webserver with no other frameworks shooting in. So for now, you can download the repository and use a tool like hfs to access texter.html on localhost in your browser on your own machine.
 
 
 ## stuff to pop up here in near future
 
-A short tutorial will be added, followed by a little documentation. 
+* Working examples
+* A short tutorial, followed by a little documentation. 
 
 
 ---
-regards
-Kristian
 
- 
+regards
+
+Kristian

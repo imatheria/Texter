@@ -157,11 +157,11 @@ export const screen =
 		const uniforms =
 		{	time: { value: performance.now() / 1000 },
 			sPhrase: { value: new THREE.Texture( idPhrase ) },
-			sTexture: { value: new THREE.TextureLoader().load( 'textures/FloorsMixedSize0018_matrix_seamless.png' ) },
+			sTexture: { value: new THREE.TextureLoader().load( 'images/FloorsMixedSize0018_matrix_seamless.png' ) },
 		};
 
 		if( shader.texture )
-		{	uniforms.sTexture = { value: new THREE.TextureLoader().load( 'textures/FloorsMixedSize0018_matrix_seamless.png' ) };
+		{	uniforms.sTexture = { value: new THREE.TextureLoader().load( 'images/FloorsMixedSize0018_matrix_seamless.png' ) };
 			//{ value: new THREE.Texture( shader.texture ) };
 			// texture only available in uniform sampler2D _when_ its loaded via THREE.TextureLoader()
 			uniforms.sTexture.value.wrapS = uniforms.sTexture.value.wrapT = THREE.RepeatWrapping;

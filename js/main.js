@@ -10,7 +10,7 @@ import { history } from './history.js';
 import { screen } from './screen.js';
 import { hud } from './hud.js';
 
-import { fetchTextfile, fetchImagefile, fontLoader } from './loaders.js';
+import { fetchTextfile, fetchImagefile, fontLoader, imageLoader } from './loaders.js';
 import { removePath, fileType } from './tools.js';
 
 import { vessel } from './lineblender.js';
@@ -184,7 +184,7 @@ export const events =
 			break;
 
 		  case 'KeyF': // display framerate
-			if( events.ctrlKey )
+			if( events.ctrlKey || events.ctrlKey )
 			{	hud.toggle( '.framerate' );
 				runtime.displayFpS = !runtime.displayFpS;
 			}
@@ -349,6 +349,7 @@ export const events =
 			break;
 
 		  case 'KeyK': // another way of displaying key hints
+			break; // not finished
 			hud.clearHints();
 			hud.displayKeyHint( "&rarr;", "&larr;", "next / previous word" );
 			hud.displayKeyHint( "&uarr;", "&darr;", "next / previous line" );
@@ -366,15 +367,11 @@ export const events =
 				screen.exitFullscreen();
 			break;
 
-		  case 'KeyM': // anotzher shader test -> the matrix eye
+		  case 'KeyM': // another shader test -> the matrix eye
 			hud.hideHud();
-			
-			fetchImagefile( 'images/starry-sky-998641clean.jpg' )
-			.then( img =>
-			{	
-				vessel.addBackGroundTexture( img );
-				matrix.show();
-			} );
+			hud.hide( '.title' );
+			stars.show();
+			matrix.show();
 			break;
 
 		  case 'KeyR': // log required files (for debugging)
@@ -409,41 +406,6 @@ export const events =
 		
 		switch( event.code )
 		{
-		  case 'KeyB':
-		   // blending test
-			hud.hideHud();
-			fetchImagefile( "textures/red-stone-seamless.jpg" )
-			.then( img1 =>
-			{	fetchImagefile( "textures/pexels-pixabay-268415_transfade.png" )
-				.then( img2 =>
-				{	const back = screen.asPlane( img1 );
-					const txt1 = screen.asPlane( img2 );
-					const txt2 = screen.asPlane( img2 );
-					const txt3 = screen.asPlane( img2 );
-
-					txt2.material.blending = THREE.AdditiveBlending;
-					txt3.material.blending = THREE.CustomBlending;
-					txt3.material.blendSrc = THREE.SrcAlphaFactor;
-					txt3.material.blendDst = THREE.DstAlphaFactor;
-					txt3.material.blendEquation = THREE.ReverseSubtractEquation;
-					//txt3.material.opacity = .5;
-
-					txt1.position.x = -192;
-					txt3.position.x = +192;
-
-					screen.scene.add( back );
-					screen.scene.add( txt1 );
-					screen.scene.add( txt2 );
-					screen.scene.add( txt3 );
-
-					if( !screen.camera )
-						screen.applyOrthographicCamera();
-					
-					screen.renderer.render(screen.scene, screen.camera);
-				});
-			});
-			break;
-
 		  case 'KeyB': // show blur rendering canvas
 			hud.toggle( '.blurcanvas' );
 			break;
@@ -617,7 +579,7 @@ export const events =
 			if(resources.acceptedImageFileTypes.includes( type ))
 			{
 				if( !resources.images.has( file.name ) )
-					resources.imageloader.stageFile( file );
+					imageLoader.stageFile( file );
 				return;
 			}
 			

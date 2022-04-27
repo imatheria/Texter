@@ -1475,11 +1475,16 @@ console.log("canvasTexture", action);
 	 // iterate through layers or use defaultLayer
 		const layers = con.layers.length ? con.layers : [builder.defaultLayer(0)];
 
+	 // some shortened debug output in console
+		hud.log(phrase.text + '\n' + layers.map( 
+			(layer) => [layer.id, layer.operations.map( 
+				(op) => [op.id, op.skip, op.op, op.type || ' - ', op.alpha, op.src || ' - '].join('|') ).join('\n    ') 	  ].join(' : ') ).join('\n') );
+				 
 		layers.forEach( (layer) =>
 		{//
 			let maxExtend = 0;
 			planeZ += .1;
-			console.log(`rendering layer ${layer.id}`);
+//			console.log(`rendering layer ${layer.id}`);
 
 		 // paint the stuff
 			ctx.clearRect( 0, 0, painter.textCanvasMaxSize[0], painter.textCanvasMaxSize[1] );
@@ -1489,8 +1494,7 @@ console.log("canvasTexture", action);
 				if( action.skip )
 					continue;
 				
-				console.log(`rendering operation ${action.op}`);
-
+//				console.log(`rendering operation ${action.op}`);
 				maxExtend = Math.max( action.thickness||0, action.sizeX||0, action.sizeY||0, maxExtend||0 );
 
 				ctx.globalCompositeOperation = action.blending || "source-over";
@@ -1570,7 +1574,7 @@ console.log("canvasTexture", action);
 								intX -2,
 								intY -2	);
 			}
-			console.log("phrase position",[intX, intY]);			
+			console.log("phrase position:",[intX, intY], " - phrase offset:", layer.offset);			
 		 // layer as THREEjs plane mesh
 			const idPhrase = ctx.getImageData(
 				centerX - intX/2,
@@ -1586,7 +1590,6 @@ console.log("canvasTexture", action);
 
 
 		 // set position and opacity
-			console.log("phrase offset", layer.offset);
 			mesh.position.set( phrase.phraseX + (layer.offset ? layer.offset[0]||0 : 0),
 							   phrase.phraseY + (layer.offset ? layer.offset[1]||0 : 0),
 							   planeZ );

@@ -256,23 +256,19 @@ export const matrix =
 		screen.applyOrthographicCamera();
 
 	 // generate matrix eye shader
-//		const geometry = new THREE.PlaneGeometry( 1920, 1920, 1, 1 );
 		const geometry = new THREE.PlaneGeometry( 640, 640, 1, 1 );
 
 		const material = new THREE.ShaderMaterial(
 		{	uniforms: matrix.uniforms,
-//			blending: THREE.AdditiveBlending,
 			vertexShader: matrix.vertexShader,
 			fragmentShader: matrix.fragmentShader,
 			transparent: true,
 //			flatShading: true,
-//			opacity: 0.1,
+			opacity: 0.1,
 		});
-console.log("matrix material", material);
 
 		const mesh = new THREE.Mesh( geometry, material );
-		mesh.material.opacity = 0.1;
-		mesh.position.set( -100., -100., 0. );
+		mesh.position.set( 0., 0., 0. );
 		screen.scene.add( mesh );
 		requestAnimationFrame( matrix.move );
 	},
@@ -285,8 +281,7 @@ console.log("matrix material", material);
 	{
 		screen.renderer.render(screen.scene, screen.camera);
 		matrix.uniforms[ 'time' ].value = performance.now() / 1000;
-//		if(matrix.running)
-//			requestAnimationFrame( matrix.move );
-console.log("STOPPED");
+		if(matrix.running)
+			requestAnimationFrame( matrix.move );
 	},
 };

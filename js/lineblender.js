@@ -9,7 +9,7 @@ export const vessel =
 {
 	uniforms:
 	{	time: { value: 1.0 },
-		colorTexture: { value: new THREE.TextureLoader().load( 'textures/FloorsMixedSize0018_matrix_seamless.png' ) },
+		colorTexture: { value: new THREE.TextureLoader().load( 'images/FloorsMixedSize0018_matrix_seamless.png' ) },
 		windowTexture: { value: new THREE.DataTexture( new Uint8Array( 128 * 128 * 3 ), 128, 128, THREE.RGBFormat ) },
 	},
 	vertexShader: `

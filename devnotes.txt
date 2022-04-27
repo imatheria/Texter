@@ -1,10 +1,8 @@
 
-· set up github 
-	· readme.md and LICENSE
+· set up github readme.md
 	· short tutorial
 	· small documentation of features available so far
-
-· set up github readme.md tutorial and LICENSE 
+	· LICENSE
 
 · cross browser check
 	· check which fonts are accepted by which browsers.

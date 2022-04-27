@@ -175,7 +175,6 @@ export const builder =
 
 	resolveUnit : ( value, defaultUnit ) =>
 	{	const [num,mes] = splitMeasurement( value );
-		console.log( "resolveUnit", [num, mes], defaultUnit );
 		switch( mes || defaultUnit || 'px')
 		{ 	case 'px': 	return num;
 		 	case 'pt': 	return num * 1.3333;
@@ -204,7 +203,6 @@ export const builder =
 			
 	resolveBackgroundScale: ( value, scaleBase ) =>
 	{	const [num,mes] = splitMeasurement( value );
-		console.log( "resolveBackgroundScale", [num, mes] );
 		switch( mes )
 		{ 	case 'abs':	return num;
 			case 'vw': 	return num * screen.width / 100;
@@ -914,7 +912,8 @@ export const builder =
 				}
 			} );
 		}
-				
+
+		console.log("expanded", expanded.concat() );
 		return { expanded: expanded, charCount: charCount };
 	},
 
@@ -953,6 +952,7 @@ export const builder =
 		 //
 			switch( e.type )
 			{ case 'style': // {} block
+console.log("STYLE", {...e.commands});
 				builder.applyStyleDefinitions( e.commands );
 				continue;
 				
@@ -961,6 +961,7 @@ export const builder =
 				continue;
 				
 			  case 'array': // [] block
+console.log("ARRAY", [...e.array]);
 				if(!e.array) hud.logError("BPF array doesn't contain [] block!");
 				continue;
 

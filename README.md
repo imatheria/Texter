@@ -9,13 +9,14 @@ The only requirement is a browser supporting ES6 and WebGL, as most of actual br
 
 I use this in Firefox and sometimes Chrome, and as for now, Firefox performs best for this.
 
+Texter comes with **minimal dependencies.** Except for THREE.js and a jison parser, it requires **nothing** else, which makes it a little hard for me finding the right open-source-license for it. All of it is hand made, and it reached a quite stable state.
 
 ## Development progress
 
 Right now, i'm getting some examples to work to show them inside this readme. Get a first glance of Texter here -> <a href="https://imatheria.github.io/Texter/texter.html" target="_blank">https://imatheria.github.io/Texter/texter.html</a>
 
 Unfortunately, the GitHub-Pages routines collide with Texter's routines for fetching files, having it crash with a lot of errormessages from a bunch of \*.jsm files.
-it seems i'll have to find a hosting solution for it. 
+it seems i'll have to find another hosting solution for it. 
 
 Texter just requires a static webserver with no other frameworks shooting in. So for now, you can download the repository and use a tool like hfs to access texter.html on localhost in your browser on your own machine.
 
@@ -28,6 +29,5 @@ Texter just requires a static webserver with no other frameworks shooting in. So
 
 ---
 
-regards
-
+regards & have a little patience
 Kristian

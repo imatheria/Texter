@@ -23,15 +23,17 @@ Another way of running it would be on your own machine via localhost. Just downl
 
 ### Development progress
 
-Unfortunately, we still may encounter numerous things that doesn't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i just go with Chromium and Firefox. And yes, there may still be some bugs in Texter. Let me know about any hassle with this. But if everythings works fine, please let me know also :-)
+Unfortunately, there is a little change that we still encounter numerous things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i just go with Chromium and Firefox. And yes, there may still be some bugs in Texter. Let me know about any hassle with this. But for now, **just assume everythings works fine and give it a try.** :-)
+
+Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.
 
 Should i package this inside npm? Not sure. No time right now.
 
 
 ## stuff to pop up here in near future
 
-* some Working examples
-* A short tutorial, followed by a little documentation. 
+* some more working examples
+* A short tutorial, followed by a little documentation.
 
 
 ---

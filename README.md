@@ -23,7 +23,7 @@ Another way of running it would be on your own machine via localhost. Just downl
 
 ### Development progress
 
-Unfortunately, there is a little change that we still encounter numerous things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i just go with Chromium and Firefox. And yes, there may still be some bugs in Texter. Let me know about any hassle with this. But for now, **just assume everythings works fine and give it a try.** :-)
+Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i just go with Chromium and Firefox. And yes, there may still be some bugs in Texter. Let me know about any hassle with this. But for now, **just assume everythings works fine and give it a try.** :-)
 
 Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.
 

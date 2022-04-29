@@ -14,7 +14,12 @@ Texter comes with **minimal dependencies.** Except for THREE.js and a jison pars
 
 ### Try it here on Github
 
-Get a first glance of Texter here -> https://imatheria.github.io/Texter/texter.html?examples/sheets/imagine.txt. It auto-loads a small example given by the url. Press \[Enter\] to start rendering, then use arrow keys to display the words or lines. It works forward and backward.
+Get a first glance of Texter here -> https://imatheria.github.io/Texter/texter.html?examples/sheets/imagine.txt. It auto-loads a small example given by the url. 
+ - first wait until stuff gets green and the start button appears.
+ - Press \[Enter\] to start rendering.
+It will go FullScreen. Rendering process may take a little while.
+ - as soon as the screen turns black, use arrow keys to display words or lines. It works forward and backward.
+ - hit \[Esc\] to exit FullScreen.
 
 If you want to try dropping your own scripts together with images and fonts, just call https://imatheria.github.io/Texter/texter.html
 
@@ -23,11 +28,11 @@ Another way of running it would be on your own machine via localhost. Just downl
 
 ### Development progress
 
-Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i just go with Chromium and Firefox. And yes, there may still be some bugs in Texter. Let me know about any hassle with this. But for now, **just assume everythings works fine and give it a try.** :-)
+Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i mostly go with Chromium and Firefox. Surely there are some bugs left in Texter. Let me know about any hassle with it. But for now, **just assume everythings works fine and give it a try.** It works on my machines. :blush:
 
 Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.
 
-Should i package this inside npm? Not sure. No time right now.
+Should i package this inside npm? Not sure. Taking care of other stuff right now.
 
 
 ## stuff to pop up here in near future

@@ -12,11 +12,11 @@ Texter comes with minimal dependencies. Except for THREE.js and a jison parser, 
 
 ### Try it here on Github
 
-Get a first glance of Texter in the examples
- - https://imatheria.github.io/Texter/texter.html?examples/sheets/imagine.txt 
- - https://imatheria.github.io/Texter/texter.html?examples/sheets/matrix_still.txt
+Get a first glance of Texter in the examples<br>
+ · https://imatheria.github.io/Texter/texter.html?examples/sheets/imagine.txt<br>
+ · https://imatheria.github.io/Texter/texter.html?examples/sheets/matrix_still.txt<br>
  
-but **first know** what happens when you click the links:
+but **first know** what happens when you click the links:<br>
 It auto-loads a small example given by the url. 
  - first wait until all requred files got fetched and the start button appears.
  - Press \[Enter\] to start rendering.

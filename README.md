@@ -12,7 +12,11 @@ Texter comes with minimal dependencies. Except for THREE.js and a jison parser, 
 
 ### Try it here on Github
 
-Get a first glance of Texter here -> https://imatheria.github.io/Texter/texter.html?examples/sheets/imagine.txt. It auto-loads a small example given by the url. 
+Get a first glance of Texter in the examples
+ · https://imatheria.github.io/Texter/texter.html?examples/sheets/imagine.txt
+ · https://imatheria.github.io/Texter/texter.html?examples/sheets/matrix_still.txt
+but **first know** what happens when you click the links:
+It auto-loads a small example given by the url. 
  - first wait until all requred files got fetched and the start button appears.
  - Press \[Enter\] to start rendering.
 It will go FullScreen. Rendering process may take a little while.
@@ -28,12 +32,12 @@ Another way of running it would be on your own machine via localhost. Just downl
 
 Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i mostly go with Chromium and Firefox. Surely there are some bugs left in Texter. Let me know about any hassle with it. But for now, **just assume everythings works fine and give it a try.** It works on my machines. :blush:
 
-Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.
+· Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.
+· still exploring github's features and possibilities
+· Should i package this inside npm? Not sure. Taking care of other stuff right now.
 
-Should i package this inside npm? Not sure. Taking care of other stuff right now.
 
-
-## stuff to pop up here in near future
+### stuff to pop up here in near future
 
 * some more working examples
 * A short tutorial, followed by a little documentation.

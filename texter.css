@@ -53,7 +53,6 @@ div.highlight
 	text-align: right;
 	vertical-align: top;
 	padding: 0px;
-	z-index:2;
 }
 
 .resource-field-area
@@ -64,7 +63,6 @@ div.highlight
 	text-align: left;
 	vertical-align: top;
 	padding: 0px;
-	z-index:2;
 }
 
 div.field
@@ -74,6 +72,7 @@ div.field
 	margin: 4px 0;
 	transition: all 777ms ease-out;
 }
+
 div.field div.progress
 {	border: none;
 	width: 100%;
@@ -111,7 +110,8 @@ div.start
 	box-shadow: inset 0px 0px .7em .7em #001a;
 	font-family: Px437_IBM_ISO8;
 	font-size: 36px;
-	
+	z-index: 3;
+
 	transition: all 777ms ease-out;
 	visibility: hidden;
 }
@@ -133,14 +133,15 @@ div.start div.button-text
 {
 }
 
-div.blocked
+div.stones
 {	display: block;
 	border: 1px solid #777;
 	background-image: url("./images/FloorHerringbone0069_1_Space_480_sharp_trans.png");
 	background-repeat: repeat-x;
 	color: #669;
+	z-index: 3;
 }
-div.blocked:hover
+div.stones:hover
 {	border: 1px solid #aaa;
 	background-color: #200;
 }

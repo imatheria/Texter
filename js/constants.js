@@ -1,4 +1,7 @@
-// default settings
+// default display settings
+export const ANTIALIAS = false
+
+// default builder settings
 export const DEFAULT_FADE = [ .5, .5 ]
 export const DEFAULT_BACKGROUND_FADE = [ .5, "image", .5 ]
 

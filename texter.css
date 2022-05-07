@@ -1,355 +1,354 @@
 @font-face
-{	font-family: 'Px437_IBM_ISO8';
+{   font-family: 'Px437_IBM_ISO8';
     src: url('./fonts/Px437_IBM_ISO8.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;	}
+    font-style: normal; }
 
 body
-{	margin: 0px;
-	padding: 0px;
-	background-color: #000;
-	width: 100%;
-	height: 100%;
-	border: none;	}
+{   margin: 0px;
+    padding: 0px;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    border: none;   }
 
 div
-{	margin: 0px;
-	padding: 0px;
-	border: none;	}
+{   margin: 0px;
+    padding: 0px;
+    border: none;   }
 
 canvas.screen
-{	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	border: none;
+{   width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    border: none;
 }
 
 div.screen
-{	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
+{   position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
 }
 div.highlight
-{	box-shadow: inset 0px 0px 64px 4px #448;	}
+{   box-shadow: inset 0px 0px 64px 4px #448;    }
 
 .label
-{	position: absolute;
-	font-family: Px437_IBM_ISO8;
-	font-size: 12px;
-	padding: 1px 4px;
-	color: #669;
-	z-index:2;
+{   position: absolute;
+    font-family: Px437_IBM_ISO8;
+    font-size: 12px;
+    padding: 1px 4px;
+    color: #669;
+    z-index:2;
 }
 
 .script-field-area
-{	position: absolute;
-	top: 17%;
-	right: 51%;
-	width: 32%;
-	text-align: right;
-	vertical-align: top;
-	padding: 0px;
+{   position: absolute;
+    top: 17%;
+    right: 51%;
+    width: 32%;
+    text-align: right;
+    vertical-align: top;
+    padding: 0px;
 }
 
 .resource-field-area
-{	position: absolute;
-	top: 17%;
-	left: 51%;
-	width: 32%;
-	text-align: left;
-	vertical-align: top;
-	padding: 0px;
+{   position: absolute;
+    top: 17%;
+    left: 51%;
+    width: 32%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0px;
 }
 
 div.field
-{	border: none;
-	width: 100%;
-	padding: 0px;
-	margin: 4px 0;
-	transition: all 777ms ease-out;
+{   border: none;
+    width: 100%;
+    padding: 0px;
+    margin: 4px 0;
+    transition: all 777ms ease-out;
 }
 
 div.field div.progress
-{	border: none;
-	width: 100%;
-	height: 32px;
-	box-shadow: inset 0px 0px 12px 12px #333;
-	background-color: #557;
-	font-family: Px437_IBM_ISO8;
-	font-size: 24px;
-	padding: 0;
-	margin: 1px 1px 1px 1px;
+{   border: none;
+    width: 100%;
+    height: 32px;
+    box-shadow: inset 0px 0px 12px 12px #333;
+    background-color: #557;
+    font-family: Px437_IBM_ISO8;
+    font-size: 24px;
+    padding: 0;
+    margin: 1px 1px 1px 1px;
 }
 div.field div.touch
-{	position: absolute; 
-	width: 100%;
-	height: 32px;
-	line-height: 32px;
-	text-align: center;
-	border-radius: 4px;
-	box-shadow: inset 0px 0px 10px 7px #000;
-	font-family: Px437_IBM_ISO8;
-	font-size: 24px;
-	padding: 0;
-	margin: 0;
+{   position: absolute; 
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 10px 7px #000;
+    font-family: Px437_IBM_ISO8;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
 }
 
 div.start
-{	position: absolute;
-	bottom: 24%;
-	left: 33%;
-	right: 33%;
-	min-width: 400px;
-	line-height: 32px;
-	text-align: center;
-	border-radius: 4px;
-	box-shadow: inset 0px 0px .7em .7em #001a;
-	font-family: Px437_IBM_ISO8;
-	font-size: 36px;
-	z-index: 3;
+{   position: absolute;
+    bottom: 24%;
+    left: 33%;
+    right: 33%;
+    min-width: 400px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px .7em .7em #001a;
+    font-family: Px437_IBM_ISO8;
+    font-size: 36px;
+    z-index: 3;
 
-	transition: all 777ms ease-out;
-	visibility: hidden;
+    transition: opacity 777ms ease-out;
+    visibility: hidden;
 }
 
 div.start div.progress
 {
-	position: absolute;
-	display: block;
-	width: 0%;
-	height: 100%;
-	bottom: 0;
-	left: 0;
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
 
-	border-radius: 5px;
-	box-shadow: inset 0px 0px 20px 17px #4477;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 20px 17px #4477;
 }
 
 div.start div.button-text
 {
+    color: #669;
 }
 
 div.stones
-{	display: block;
-	border: 1px solid #777;
-	background-image: url("./images/FloorHerringbone0069_1_Space_480_sharp_trans.png");
-	background-repeat: repeat-x;
-	color: #669;
-	z-index: 3;
+{   display: block;
+    border: 1px solid #777;
+    background-image: url("./images/FloorHerringbone0069_1_Space_480_sharp_trans.png");
+    background-repeat: repeat-x;
+    z-index: 3;
 }
 div.stones:hover
-{	border: 1px solid #aaa;
-	background-color: #200;
+{   border: 1px solid #7c7;
+    color: #999;
 }
-
 
 div.ready
-{	border: 1px solid #8a8;
-	background-color: #131;
+{   border: 1px solid #8a8;
+    background-color: #131;
 }
 div.ready.ready:hover
-{	border: 1px solid #8d8;
-	background-color: #432;
+{   border: 1px solid #8d8;
+    background-color: #432;
 }
 
 div.field .highlight
-{	border: 1px solid #fed;
-	background-color: #4328;
-	color: #fed;
+{   border: 1px solid #fed;
+    background-color: #4328;
+    color: #fed;
 }
 div.field .outstanding
-{	border: 1px solid #777;
-	background-color: #200;
-	color: #669;
+{   border: 1px solid #777;
+    background-color: #200;
+    color: #669;
 }
 div.field .fading
-{	border: 1px solid #222;
-	background-color: #0000;
-	color: #000;
-	transition: all 1777ms ease-out;
+{   border: 1px solid #222;
+    background-color: #0000;
+    color: #000;
+    transition: all 1777ms ease-out;
 }
 div.field .loading
-{	border: 1px solid #777;
-	background-color: #2228;
-	color: #669;
+{   border: 1px solid #777;
+    background-color: #2228;
+    color: #669;
 }
 div.field .ready
-{	border: 1px solid #8d8;
-	background-color: #321;
-	color: #8e8;
+{   border: 1px solid #8d8;
+    background-color: #321;
+    color: #8e8;
 }
 div.field .error
-{	border: 1px solid #855;
-	background-color: #200;
-	color: #866;
+{   border: 1px solid #855;
+    background-color: #200;
+    color: #866;
 }
 div.field .ready:hover
-{	border: 1px solid #fff;
-	background-color: #444;
-	color: #fff;
+{   border: 1px solid #fff;
+    background-color: #444;
+    color: #fff;
 }
 
 .title
-{	top: 7%;
-	left: 7%;
-	right: 7%;
-	bottom: 7%;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
+{   top: 7%;
+    left: 7%;
+    right: 7%;
+    bottom: 7%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info
-{	bottom: 4%;
-	left: 3%;
-	right: 3%;
-	font-size: 24px;
-	text-align: center;
+{   bottom: 4%;
+    left: 3%;
+    right: 3%;
+    font-size: 24px;
+    text-align: center;
 }
 
 .framerate
 {
-	top: 4%;
-	left: 4%;
-	width: 25%;
-	visibility: hidden;
+    top: 4%;
+    left: 4%;
+    width: 25%;
+    visibility: hidden;
 }
 
 .stats
 {
-	top: 25%;
-	left: 3%;
-	visibility: hidden;
+    top: 25%;
+    left: 3%;
+    visibility: hidden;
 }
 
 .logs
 {
-	bottom: 4%;
-	right: 3%;
-	width: 30%;
-	text-align: right;
-	vertical-align: bottom;
-	visibility: hidden;
+    bottom: 4%;
+    right: 3%;
+    width: 30%;
+    text-align: right;
+    vertical-align: bottom;
+    visibility: hidden;
 }
 
 .hints
-{	
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 4px;
-	
-	bottom:4%;
-	left: 3%;
-	text-align: left;
-	vertical-align: bottom;
+{   
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4px;
+    
+    bottom:4%;
+    left: 3%;
+    text-align: left;
+    vertical-align: bottom;
 
-	font-size: 12px;
-	visibility: hidden;	
+    font-size: 12px;
+    visibility: hidden; 
 }
 
 .hints .key-parent
 {
-	height: 40px;
-	text-align: center;
+    height: 40px;
+    text-align: center;
 }
 
 .hints .key
 {
-	width: 32px;
-	height: 32px;
-	
-	font-family: Arial, sans-serif;
-	font-size: 12px;
+    width: 32px;
+    height: 32px;
+    
+    font-family: Arial, sans-serif;
+    font-size: 12px;
 
-	margin-right: 4px;
-	line-height: 32px;
-	text-align: center;
-	background-color: #222;
+    margin-right: 4px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #222;
 
-	border: 1.4px solid #666;
-	border-radius: 5px;
-	box-shadow: inset 0px 0px .5em .2em #000;
-	
-	transition: all 1777ms ease-out;
-	
-	float: left;
+    border: 1.4px solid #666;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px .5em .2em #000;
+    
+    transition: all 1777ms ease-out;
+    
+    float: left;
 }
 .hints .long
-{	width: 70px;
+{   width: 70px;
 }
 
 .hints .fat
-{	width: 48px;
-	margin-left: 12px
+{   width: 48px;
+    margin-left: 12px
 }
 
 .hints .big
-{	font-size: 16px;
+{   font-size: 16px;
 }
 
 .hints .description-parent
 {
-	height: 32px;
+    height: 32px;
 }
 .hints .description
-{	text-align: left;
-	line-height: 32px;
+{   text-align: left;
+    line-height: 32px;
 
-	transition: all 1777ms ease-out;
+    transition: all 1777ms ease-out;
 }
 
 .textcanvas {
-	position:absolute;
-	top: 4px;
-	left: 4px;
-	width: 1024px;
-	height: 1024px;
-	overflow: scroll;
-	background: linear-gradient(#474, #000);
-	visibility: hidden;	}
+    position:absolute;
+    top: 4vh;
+    left: 4vh;
+    width: 92vh;
+    height: 92vh;
+    overflow: scroll;
+    background: linear-gradient(#474, #000);
+    visibility: hidden; }
 
 .blurcanvas {
-	position:absolute;
-	top: 4px;
-	left: 4px;
-	width: 1024px;
-	height: 1024px;
-	overflow: scroll;
-	background: linear-gradient(#744, #000);
-	visibility: hidden;	}
+    position:absolute;
+    bottom: 4vh;
+    left: 4vh;
+    width: 92vh;
+    height: 92vh;
+    overflow: scroll;
+    background: linear-gradient(#744, #000);
+    visibility: hidden; }
 
 .imagecanvas {
-	position:absolute;
-	bottom:4px;
-	right: 4px;
-	width: 1024px;
-	height: 1024px;
-	overflow: scroll;
-	background: linear-gradient(#447, #000);
-	visibility: hidden;	}
+    position:absolute;
+    top: 4vh;
+    right: 4vh;
+    width: 92vh;
+    height: 92vh;
+    overflow: scroll;
+    background: linear-gradient(#447, #000);
+    visibility: hidden; }
 
 .measure-cm
-{	top: 0px;
-	left: 0px;
-	height: 1cm;
-	visibility: hidden;
+{   top: 0px;
+    left: 0px;
+    height: 1cm;
+    visibility: hidden;
 }
 
 .measure-in
-{	position:absolute;
-	top: 0px;
-	left: 0px;
-	height: 1in;
-	visibility: hidden;
+{   position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 1in;
+    visibility: hidden;
 }
 
 .measuretext
-{	position:absolute;
-	top: 0px;
-	left: 0px;
-	height: 1em;	}
+{   position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 1em;    }

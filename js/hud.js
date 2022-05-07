@@ -266,6 +266,24 @@ export const hud =
         hud.hide( '.start');
     },
 
+    resetHud()
+    {
+        hud.hideHud();
+
+        hud.show( 'div.screen' );
+        hud.show( '.title' );
+        hud.show( '.resource-field-area' );
+        hud.show( '.script-field-area' );
+        hud.show( '.info' );
+
+        hud.hide( '.framerate' );
+
+        if( resoruces.requirementsMet() )
+            hud.show('start');
+        else
+            hud.hide('start');
+    },
+
     showTexturesCanvas( n )
     {   let div = document.querySelector('.imagecanvas');
         if (div.firstChild) div.removeChild( div.firstChild );

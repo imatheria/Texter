@@ -2,7 +2,6 @@
 · set up github readme.md
 	· short tutorial
 	· small documentation of features available so far
-	· LICENSE
 
 · cross browser check
 	· check which fonts are accepted by which browsers.

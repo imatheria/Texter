@@ -294,6 +294,10 @@ export const events =
             hod.logSpecial( 'KeyD - remove a script if hovered // will work soon' );
             break;
             
+          case 'Escape':
+            hud.resetHud();             
+            break;
+            
           case 'KeyC':
             hud.hideHud();
             break;

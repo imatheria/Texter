@@ -33,7 +33,8 @@ Lets say you want to display a "Hello World" in big red letters on a background 
 { font: my_font.ttf
   layer: {  fill( #F77 )    }
 }
-Hello World```
+Hello World
+```
 
 and save it. Then you drop the file into Texter. You'll see both `my_background.jpg` and `my_font.ttf` appear in dark grey on the right side. Now you drop the 2 required files also, wait until everything gets green and you're ready to go.
 

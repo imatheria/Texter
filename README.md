@@ -54,22 +54,22 @@ whatever you want :-)
 ### Key bindings
 
 In HUD-mode (where you see the Texter Logo and the stars), the following Keys are assigned:
-<br>`· [D]` : Display dev notes.
-<br>`· [H]` : Display key-bindings for performance-mode. (as below)
-<br>`· [L]` : Display logs.
-<br>`· [S]` : show/hide stars.
-<br>`· [Ctrl+T]` : run unit-tests.
-<br>`· [C]` : Clear hud, hide HUD-Elements except title and start-button.
-<br>`· [F]` : Fullscreen mode on/off.
-<br>`· [Esc]` : reset HUD to initial state.
-<br>`· [M]` : Matrix Eye. Activate a shader demonstration. Something that may be possible on text display in near future.
+<br>· `[D]` : Display dev notes.
+<br>· `[H]` : Display key-bindings for performance-mode. (as below)
+<br>· `[L]` : Display logs.
+<br>· `[S]` : show/hide stars.
+<br>· `[Ctrl+T]` : run unit-tests.
+<br>· `[C]` : Clear hud, hide HUD-Elements except title and start-button.
+<br>· `[F]` : Fullscreen mode on/off.
+<br>· `[Esc]` : reset HUD to initial state.
+<br>· `[M]` : Matrix Eye. Activate a shader demonstration. Something that may be possible on text display in near future.
 
 In performance-mode (runtime), the following Keys are assigned:
-<br>`· [&rarr;], [&larr;]` : show next/previous word.
-<br>`· [&uarr;], [&darr;]` : show next/previous line.
-<br>`· [pgUp], [pgDn]` : show next/previous page.
-<br>`· [Enter]` : Display next visible Emelent (word or image).
-<br>`· [Esc]` : Exit Fullscreen.
+<br>· `[&rarr;], [&larr;]` : show next/previous word.
+<br>· `[&uarr;], [&darr;]` : show next/previous line.
+<br>· `[pgUp], [pgDn]` : show next/previous page.
+<br>· `[Enter]` : Display next visible Emelent (word or image).
+<br>· `[Esc]` : Exit Fullscreen.
 
 
 ### Development progress

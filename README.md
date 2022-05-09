@@ -70,7 +70,7 @@ In performance-mode (runtime), the following Keys are assigned:
 <br>· `[pgUp], [pgDn]` : show next/previous page.
 <br>· `[Enter]` : Display next visible Emelent (word or image).
 <br>· `[Esc]` : Exit Fullscreen.
-
+<br>· `[Ctrl+F]` : display framerate.
 
 ### Development progress
 

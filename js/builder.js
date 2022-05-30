@@ -127,8 +127,7 @@ export const builder =
 		} )
 		.catch( (error) =>
 		{
-			hud.logError( `${error}` );
-			console.error( `-> ${error.fileName ? error.fileName : ""} ${error.lineNumber ? "line "+error.lineNumber : ""}` );
+			hud.logError( `${error} -> ${error.fileName ? error.fileName : ""} ${error.lineNumber ? "line "+error.lineNumber : ""}` );
 			throw error;
 		} ),
 
@@ -639,6 +638,7 @@ export const builder =
 	 // · font size scale on newpage and style
 	 // · line width and height calculation
 	 // · mark linefeeds after command blocks to ignore
+	 //   _IF_ 
 		{
 			let fontFamily = defaults.FONT;
 			let fontSize = defaults.FONT_SIZE;
@@ -658,7 +658,6 @@ export const builder =
 			{	type: 'linefeed',
 				width: 0,
 				height: 0,
-				//ignore: false,
 				skip: true,
 			};
 
@@ -723,8 +722,9 @@ export const builder =
 			.map( (e,i,a) =>
 			{	
 				if(['style', 'image', 'array', 'newpage'].includes(e.type))
-					if( a[i+1] )
-						if( a[i+1].type == 'linefeed' ) a[i+1].skip = true;
+					if( a[i+1] && a[i-1] )
+						if( a[i-1].type == 'linefeed' )
+							if( a[i+1].type == 'linefeed' ) a[i+1].skip = true;
 				return e;
 			} );
 
@@ -940,7 +940,8 @@ export const builder =
 		for(const e of expanded)
 		{
 			if( e.scriptStart )
-			{	painter.resetContext();
+			{	
+				painter.resetContext();
 				con = painter.context;
 			}
 			

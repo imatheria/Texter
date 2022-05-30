@@ -1,0 +1,33 @@
+< src: examples/images/person-walking-on-street-between-buildings-3617457.jpg, fade: 7, drift: 0 2px .2 0, offset: 0 -.5vh >
+{ 	font: examples/fonts/After Shok.TTF
+	layer: {
+		fill( #222, .9)
+		texture: { file: examples/images/red-stone-seamless.jpg, alpha:.5 }
+		blur( thin #000, .07 )
+		fade: 2 page 3
+	}
+	layer: { 
+		stroke( #00f )
+		blur( thin #777, .20, .7 )
+		texture: { file: examples/images/TexturesCom_Crackles0069_3_seamless_S.png, operation: subtract	}
+		fade: 4 page 4
+		blend: add
+	}
+	layer: { 
+		blur( #FC0, .1 )
+		texture: { file: examples/images/TexturesCom_Crackles0069_3_seamless_S.png, alpha: .5, operation: subtract	}
+		fade: 4 page 4
+		blend: add
+	}
+	layer: {
+		stroke( #FFF, .707 )
+		texture: { file: examples/images/WrinklesFoil0002_2_S.jpg, alpha: 1, operation: subtract }
+		fade: 1 page 5		
+		blend: add
+}	}
+it's loneliness 
+
+that makes the loudest 
+
+noise
+---

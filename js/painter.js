@@ -291,13 +291,13 @@ export const painter =
 	 // make seamless if its small enough
 		let nx = Math.trunc( defaults.IMAGE_CANVAS_MAX[0] / img.width );
 		let ny = Math.trunc( defaults.IMAGE_CANVAS_MAX[1] / img.height );
-		nx = nx ? nx : 1;
-		ny = ny ? ny : 1;
+		nx = nx>1 ? nx : 2;
+		ny = ny>1 ? ny : 2;
 		
 	 // create new canvas with size of image, new context and new ImageData entry
 		let cnv = document.createElement('canvas');
-		cnv.width = nx*img.width;
-		cnv.height = ny*img.height;
+		cnv.width =  Math.min( nx*img.width,  defaults.IMAGE_CANVAS_MAX[0] );
+		cnv.height = Math.min( ny*img.height, defaults.IMAGE_CANVAS_MAX[1] );
 		
 		let ctx = cnv.getContext('2d');
 	
@@ -626,7 +626,7 @@ export const painter =
 		ctx.putImageData( id, 0, 0 );
 	},
 
-	canvasTexture( action, width, height )
+	canvasTexture( action, phraseWidth, phraseHeight )
 	{// prepare image canvas
 		painter.renderImageAsSeamlessCanvas( action );
 
@@ -635,12 +635,12 @@ export const painter =
 		const centerY = painter.textCanvasMaxSize[1] / 2;
 
 	 // don't paint outside canvas borders
-		const textWidth = Math.min( width, painter.textCanvasMaxSize[0] );
-		const textHeight = Math.min( height, painter.textCanvasMaxSize[1] );
+		const textWidth  = Math.min( phraseWidth,  painter.textCanvasMaxSize[0] );
+		const textHeight = Math.min( phraseHeight, painter.textCanvasMaxSize[1] );
 
 	 // get random area from seamless texture	 
-		const grabX = Math.trunc( (action.canvas.width -  width)  * Math.random() );
-		const grabY = Math.trunc( (action.canvas.height - height) * Math.random() );
+		const grabX = Math.trunc( (action.canvas.width -  textWidth)  * Math.random() );
+		const grabY = Math.trunc( (action.canvas.height - textHeight) * Math.random() );
 		
 	 // get Pixeldata from main canvas
 		const textId = ctx.getImageData( centerX-textWidth/2, centerY-textHeight/2, textWidth, textHeight );
@@ -790,7 +790,7 @@ export const painter =
 	 // prepare new background instance, keep fade
 		painter.context.background = {
 			alpha: 1.,
-			fade: [ painter.context.background.fade ], // performances[ PLANE_FADE ] kept
+			fade: painter.context.background.fade, // performances[ PLANE_FADE ] kept
 			drifts: [],
 			offset: [0,0],
 		},
@@ -891,7 +891,7 @@ export const painter =
 			return;
 			
 		  case 'fade':
-			plane.fade = builder.resolveFade( value, 'image' ) || plane.fade;
+			plane.fade = builder.resolveFade( value, 'image' ) || plane.fade || builder.resolveFade( defaults.DEFAULT_BACKGROUND_FADE );
 			return;
 			
 		  case 'dim':
@@ -1156,7 +1156,7 @@ export const painter =
 						con.focus.blur.alpha = v;
 						break;
 					  case 2:
-						con.focus.blur.density = resolveThickness( v );
+						con.focus.blur.thickness = resolveThickness( v );
 						break;
 					  case 3:
 						con.focus.blur.rotation = parseFloat( v );

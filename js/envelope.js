@@ -18,7 +18,8 @@ export class Envelope
 	update( {startValue, envelope, onValue, onWait, onFinish, target, scale} )
 	{
 		this.env = envelope || this.env || [[ 1,0 ]];
-		this.onValue = onValue || this.onValue || ((v) => console.log("Envelope.onValue", v));
+		this.onValue = onValue || this.onValue || ((v) => 
+			console.log("unused Envelope.onValue", v, this.onValue));
 		this.onWait = onWait || this.onWait;
 		this.onFinish = onFinish || this.onFinish;
 		this.startValue = startValue;
@@ -102,7 +103,7 @@ export class Envelope
 			return count;
 		};
 		
-
+	 //
 		this.timeMark = runtime.time;
 		envelopeTimer();
 		let actual = [ parseFloat(startValue) || 0. ,runtime.time ];

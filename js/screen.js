@@ -80,7 +80,7 @@ export const screen =
 			return;
 		}
 		screen.applyOrthographicCamera();
-		fetchImagefile( "pixeltestpage.png" ).then( img =>
+		fetchImagefile( "./images/pixeltestpage.png" ).then( img =>
 		{	hud.log(`pixeltestpage.png loaded.`);
 
 		 // texture creation

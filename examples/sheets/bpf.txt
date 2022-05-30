@@ -1,0 +1,44 @@
+< src: examples/images/abstract-architecture-background-buildings-370717.jpg, drift: 0 0 .1 >
+{	font: examples/fonts/After Shok.TTF,
+	linespacing: 25px
+	layer: {
+		fill( #222, .9)
+		texture: { file: examples/images/red-stone-seamless.jpg, alpha:.5 }
+		blur( #000, .1, 1, 4 )
+		fade: 2 page 4
+	}
+	layer: { 
+		stroke( #00f )
+		blur( thin #777, .25 )
+		texture: { file: examples/images/TexturesCom_Crackles0069_3_seamless_S.png, operation: subtract	}
+		fade: 4 page 4
+		blend: add
+	}
+	layer: { 
+		blur( #FC0, .1 )
+		texture: { file: examples/images/TexturesCom_Crackles0069_3_seamless_S.png, alpha: .5, operation: subtract	}
+		blend: add
+	}
+	layer: {
+		stroke( #FFF, .707 )
+		texture: { file: examples/images/WrinklesFoil0002_2_S.jpg, alpha: 1, operation: subtract }
+		fade: 1 page 5		
+		blend: add
+}	}
+bAad 
+Programmers
+[2]fAIL[1]
+----
+{ font: Px437_IBM_ISO8, linespacing: 0 }
+Theorie ist, wenn man alles weiss
+und nichts richtig funktioniert.
+
+Praxis ist, wenn alles richtig funktioniert
+und keiner weiss warum.
+
+Als Programmierer kombiniere ich 
+Theorie und Praxis:
+
+Nichts funktioniert richtig, 
+und ich weiss nicht warum!
+---

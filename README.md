@@ -32,7 +32,8 @@ It will go FullScreen. Rendering process may take a little while.
 If you want to try your own scripts together with images and fonts, you can use Texter serverlessly. Call https://imatheria.github.io/Texter/texter.html and drop image-, font- and text-files into the browser-window.
 
 Lets say you want to display a "Hello World" in big red letters on a background image `my_background.jpg` using your own font `my_font.ttf` you have on your harddisk. So you open your desired Text-Editor and type in 
-```< image: my_background.jpg >
+```
+< image: my_background.jpg >
 { font: my_font.ttf
   layer: {  fill( #F77 )    }
 }
@@ -48,7 +49,7 @@ Dropped Text-files are parsed instantly. If parser fails, the file is rejected. 
 
 ### Have Texter auto-load your stuff
 
-Texter tries to auto-load every required file from server. So if you give a path to the filename,  say `< image: examples/images/sand_seamless.jpg >` , it looks for it on the server next to the texter.html file in the specified folder, as you can find in the examples folder. 
+Texter tries to auto-load every required file from server. So if you give a path to the filename, say `< image: examples/images/sand_seamless.jpg >` , it looks for it on the server next to the texter.html file in the specified folder. 
 
 To auto-load a script from server, just place it in the URL behind a `?`, as seen in the examples above.
 

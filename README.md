@@ -21,10 +21,10 @@ Get a first glance of Texter in the examples<br>
 but **first know what happens** when you click the links:<br>
 It auto-loads a small example given by the url. 
  - first wait until all requred files got fetched and the start button appears.
- - Press `\[Enter\]` to start rendering.
+ - Press `[Enter]` to start rendering.
 It will go FullScreen. Rendering process may take a little while.
  - as soon as the screen turns black, use arrow keys to display words or lines. It works forward and backward.
- - hit `\[Esc\]` to exit FullScreen.
+ - hit `[Esc]` to exit FullScreen.
 
 
 ### Write your own Texter scripts
@@ -69,16 +69,17 @@ In HUD-mode where you can drop files (you see the Texter Logo and the stars), th
 <br>· `[M]` : Matrix Eye. Activate a shader demonstration. Something that may be possible on text display in near future.
 
 In performance-mode (runtime), the following Keys are assigned:
-<br>· `[&rarr;], [&larr;]` : show next/previous word.
-<br>· `[&uarr;], [&darr;]` : show next/previous line.
+<br>· `[⇐], [⇒]` : show next/previous word.
+<br>· `[⇑], [⇓]` : show next/previous line.
 <br>· `[pgUp], [pgDn]` : show next/previous page.
 <br>· `[Enter]` : Display next visible Emelent (word or image).
 <br>· `[Esc]` : Exit Fullscreen.
 <br>· `[Ctrl+F]` : display framerate.
 
+
 ### Development progress
 
-Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i mostly go with Chromium and Firefox. Surely there are some bugs left in Texter. Let me know about any hassle with it. But for now, **just assume everythings works fine and give it a try.** It works on my machines. :blush:<br>
+Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i mostly go with Chromium and Firefox. Surely there are some bugs left in Texter. Let me know about any hassle with it. But for now, **just assume everythings works fine and give it a try.** It works on my machines. One of them is running a 4k-screen:blush:.<br>
 <br>
 · Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.<br>
 · Should i package this inside npm? Not sure. Taking care of other stuff right now.<br>
@@ -92,11 +93,6 @@ Unfortunately, there is a little chance that we still encounter things that don'
 
 ---
 
-regards & have a little patience
+regards & keep a little patience
 
 Kristian
-
-
-
-
-On my machine, Texter renders on a 4k screen.

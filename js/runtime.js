@@ -229,24 +229,45 @@ export const runtime =
 		}
 	},
 
-	forwardUntil( condition )
-	{// step forward
+	forwardTake( condition )
+	{// step forward until condition met
 		let unit;
 		do
 		{	unit = runtime.unitIterator.next();
+hud.log(`TAKE FORW ${unit.mode}`);
 			runtime.startUnit( unit );
 			if(unit.mode=='bump') return;
 		} while( !condition( unit ) );
 	},
-	backwardUntil( condition )
-	{// step forward
+	backwardTake( condition )
+	{// step backward until condition met
 		let unit;
 		do
 		{	unit = runtime.unitIterator.prev();
+hud.log(`TAKE BACK ${unit.mode}`);
 			runtime.startUnit( unit );
 			if(unit.mode=='bump') return;
 		} while( !condition( unit ) );
 	},
+	forwardLeap( condition )
+	{// step forward without activating planes
+		let unit;
+		do
+		{	unit = runtime.unitIterator.next();
+hud.log(`LEAP FORW ${unit.mode}`);
+			if(unit.mode=='bump') return;
+		} while( !condition( unit ) );
+	},
+	backwardLeap( condition )
+	{// step backward without activating planes
+		let unit;
+		do
+		{	unit = runtime.unitIterator.prev();
+hud.log(`LEAP BACK ${unit.mode}`);
+			if(unit.mode=='bump') return;
+		} while( !condition( unit ) );
+	},
+	
 
 	unitIterGenerator( units )
 	{	let index = -1;
@@ -258,6 +279,9 @@ export const runtime =
 			prev()
 			{	if(index>=0) index--;
 				return units[index] || { mode: 'bump' };
+			},
+			item()
+			{	return units[index] || { mode: 'bump' };
 			},
 		};
 		return iterator;

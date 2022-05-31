@@ -218,46 +218,62 @@ export const events =
 		  case 'ArrowRight':
 		 // step forward
 			history.pushCommand( 'word', 'forward' );
-			runtime.forwardUntil( (unit) => unit.mode == 'word' );
+			runtime.forwardTake( (unit) => unit.mode == 'word' );
 			break;
 			
 		  case 'ArrowLeft':
 		 // step backward
 			history.pushCommand( 'word', 'back' );
-			runtime.backwardUntil( (unit) => unit.mode == 'word' );
+			runtime.backwardTake( (unit) => unit.mode == 'word' );
 			break;
 			
 		  case 'ArrowUp':
 		// step backward until previous "line"
+			if( history.isLastCommand( 'line', 'forward' ) )
+				runtime.backwardLeap( (unit) => unit.mode == 'line' );
+
 			history.pushCommand( 'line', 'back' );
-			runtime.backwardUntil( (unit) => unit.mode == 'word' );
-			runtime.backwardUntil( (unit) => unit.mode == 'line' );
+			
+			runtime.backwardTake( (unit) => unit.mode == 'word' );
+			runtime.backwardTake( (unit) => unit.mode == 'line' );
 			break;
 			
   		  case 'ArrowDown':
 		// step forward until next "line"
+			if( history.isLastCommand( 'line', 'back' ) )
+				runtime.forwardLeap( (unit) => unit.mode == 'line' );
+
 			history.pushCommand( 'line', 'forward' );	
-			runtime.forwardUntil( (unit) => unit.mode == 'word' );
-			runtime.forwardUntil( (unit) => unit.mode == 'line' );
+
+			runtime.forwardTake( (unit) => unit.mode == 'word' );
+			runtime.forwardTake( (unit) => unit.mode == 'line' );
 			break;
 
 		  case 'Enter':			
   		  case 'Space':
 		// step forward until next "line"
 			history.pushCommand( 'visible', 'forward' );	
-			runtime.forwardUntil( (unit) => (unit.mode == 'word')||(unit.mode == 'image') );
+			runtime.forwardTake( (unit) => (unit.mode == 'word')||(unit.mode == 'image') );
 			break;
 			
 		  case 'PageUp':
 		 // step backward until next "page"
+			if( history.isLastCommand( 'page', 'forward' ) )
+				runtime.backwardLeap( (unit) => unit.mode == 'page' )
+
 			history.pushCommand( 'page', 'back' );
-			runtime.backwardUntil( (unit) => unit.mode == 'page' );
+
+			runtime.backwardTake( (unit) => unit.mode == 'page' );
 			break;
 			
   		  case 'PageDown':
 		 // step forward until next "page"
+			if( history.isLastCommand( 'page', 'back' ) )
+				runtime.forwardLeap( (unit) => unit.mode == 'page' )
+
 			history.pushCommand( 'page', 'forward' );
-			runtime.forwardUntil( (unit) => unit.mode == 'page' );
+
+			runtime.forwardTake( (unit) => unit.mode == 'page' );
 			break;
 
 		  default:

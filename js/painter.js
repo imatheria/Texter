@@ -11,9 +11,7 @@ import { runtime } from './runtime.js';
 import { history } from './history.js';
 import { screen } from './screen.js';
 
-import { removePath } from './tools.js';
-
-import { splitTypes } from './tools.js';
+import { removePath, splitTypes } from './tools.js';
 
 export const painter =
 {	textCanvas: undefined,
@@ -937,7 +935,6 @@ export const painter =
 				con.layers.push( layer );
 			}
 			con.focus[ 'layer' ] = layer;
-			console.log("focus layer", id);
 		}
 
 	 // operation maintenance
@@ -992,7 +989,6 @@ export const painter =
 
 			  default:
 				focusOperation( key, id ) ;
-				console.log("focus operation", key, id);
 				return key;
 			}
 		} ).join('.');
@@ -1486,7 +1482,7 @@ export const painter =
 		const phrWidth  = phrase.width + con.fontSize * (defaults.FONT_BORDER_TOLERANCE-1) |0;
 		const phrHeight = con.fontSize * defaults.FONT_BORDER_TOLERANCE |0;
 
-		hud.log(`PHRASE "${phrase.text} [${phrWidth},${phrHeight}]"`);
+		hud.log(`rendering PHRASE "${phrase.text} [${phrWidth},${phrHeight}]"`);
 
 		let planeZ = 0.0;
 		const planes = []; //gather all rendered layers here for runtimeUnit
@@ -1495,9 +1491,9 @@ export const painter =
 		const layers = con.layers.length ? con.layers : [builder.defaultLayer(0)];
 
 	 // some shortened debug output in console
-		hud.log(phrase.text + '\n' + layers.map( 
+		/*hud.log(phrase.text + '\n' + layers.map( 
 			(layer) => [layer.id, layer.operations.map( 
-				(op) => [op.id, op.skip ? 'skip' : '', op.op, op.type || '', op.alpha, op.src || ''].join('|') ).join('\n') 	  ].join(' : ') ).join('\n') );
+				(op) => [op.id, op.skip ? 'skip' : '', op.op, op.type || '', op.alpha, op.src || ''].join('|') ).join('\n') 	  ].join(' : ') ).join('\n') );*/
 				 
 		layers.forEach( (layer) =>
 		{//

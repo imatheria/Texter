@@ -1,6 +1,6 @@
 < src: examples/images/abstract-architecture-background-buildings-370717.jpg, drift: 0 0 .1 >
 {	font: examples/fonts/After Shok.TTF,
-	linespacing: 25px
+	linespacing: .25em
 	layer: {
 		fill( #222, .9)
 		texture: { file: examples/images/red-stone-seamless.jpg, alpha:.5 }
@@ -29,7 +29,7 @@ bAad
 Programmers
 [2]fAIL[1]
 ----
-{ font: Px437_IBM_ISO8, linespacing: -25px }
+{ font: Px437_IBM_ISO8, linespacing: -0.05em }
 Theorie ist, wenn man alles weiss
 und nichts richtig funktioniert.
 

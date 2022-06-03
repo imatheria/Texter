@@ -82,9 +82,9 @@ In performance-mode (runtime), the following Keys are assigned:
 
 Unfortunately, there is a little chance that we still encounter things that don't work poperly. There may be unexpected browser-hangups or unexpected behaviour. There may be collisions between the Texter-Routines and the ones from Github-Pages. I am not able to test this software in all available browsers, i mostly go with Chromium and Firefox. Surely there are some bugs left in Texter. Let me know about any hassle with it. But for now, **just assume everythings works fine and give it a try.** It works on my machines. One of them is running a 4k-screen:blush:.<br>
 <br>
-· Right now, i am tracking an issue of dropped layers if style changes multiple times in a script.<br>
+· i'm still tracking an issue of dropped layers if style changes multiple times in a script.<br>
 · Should i package this inside npm? Not sure. Taking care of other stuff right now.<br>
-
+· Hence `OffscreenCanvas` is emerging as a new feature in browsers. The rendering process may become much less blocking in the future. Even background-rendering in runtime mode may become possible. so you'll drop new text's or script's inside Texter _while_ it is in performance mode.<br>
 
 ### stuff to pop up here in near future
 

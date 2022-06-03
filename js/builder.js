@@ -553,7 +553,7 @@ export const builder =
 					} );
 
 				 // escape margins
-					onEntry( 'margin', ( [key,value] ) =>
+					onEntry( 'margin', ( [_key,value] ) =>
 					{	const margin = builder.resolveMargin( value );
 						if( !isNaN(margin[0]) ) item.marginTop 		= margin[0];
 						if( !isNaN(margin[1]) ) item.marginRight 	= margin[1];
@@ -561,18 +561,19 @@ export const builder =
 						if( !isNaN(margin[3]) ) item.marginLeft 	= margin[3];
 					} );
 
-					onEntry( 'margintop', ( [key,value] ) =>
+					onEntry( 'margintop', ( [_key,value] ) =>
 						item.marginTop = builder.resolveMarginValue( value ) );
-					onEntry( 'marginright', ( [key,value] ) =>
+					onEntry( 'marginright', ( [_key,value] ) =>
 						item.marginRight = builder.resolveMarginValue( value ) );
-					onEntry( 'marginbottom', ( [key,value] ) =>
+					onEntry( 'marginbottom', ( [_key,value] ) =>
 						item.marginBottom = builder.resolveMarginValue( value ) );
-					onEntry( 'marginleft', ( [key,value] ) =>
+					onEntry( 'marginleft', ( [_key,value] ) =>
 						item.marginLeft = builder.resolveMarginValue( value ) );
 
 				 // escape linespacing
-					onEntry( 'linespacing', ( [key,value] ) => item.lineSpacing = parseInt( value ) || 0 );
-
+					onEntry( 'linespacing', ( [_key,value] ) => 
+						item.lineSpacing = resolveSize( value ) );
+			
 					break;
 
 				  case 'image':

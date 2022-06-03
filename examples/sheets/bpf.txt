@@ -9,7 +9,7 @@
 	}
 	layer: { 
 		stroke( #00f )
-		blur( thin #777, .25 )
+		blur( thin #777, .4 )
 		texture: { file: examples/images/TexturesCom_Crackles0069_3_seamless_S.png, operation: subtract	}
 		fade: 4 page 4
 		blend: add
